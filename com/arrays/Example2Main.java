@@ -6,14 +6,14 @@ public class Example2Main {
 
         arrays.insert(10);
         arrays.insert(20);
-        arrays.insert(30);
         arrays.insert(40);
+
 
         arrays.print();
 
         System.out.println("Maximum of the array is "+arrays.max());
 
-        Example2.reverse();
+        //Example2.reverse();
 
         Example2.insertAt(2, 30);
 

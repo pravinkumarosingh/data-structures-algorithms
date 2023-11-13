@@ -68,6 +68,7 @@ public class Example2 {
             temp[i]=items[i];
             if(index==i){
                 temp[i] = number;
+                i++;
             }
 
         }
