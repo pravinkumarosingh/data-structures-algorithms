@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 public class Example2 {
     private Node first;
     private Node last;
+    private int size;
 
     private class Node{
         private Node next;
@@ -23,6 +24,7 @@ public class Example2 {
             last.next = node;
             last = node;
         }
+        size++;
     }
 
     public void addFirst(int item){
@@ -33,6 +35,7 @@ public class Example2 {
             node.next = first;
             first = node;
         }
+        size++;
     }
 
     public int indexOf(int item){
@@ -66,12 +69,45 @@ public class Example2 {
 
         if(first == last){
             first = last = null;
-            return;
+        } else {
+            Node second = first.next;
+            first.next = null;
+            first = second;
+        }
+        --size;
+    }
+    
+    public void removeLast(){
+        if(isEmpty()){
+            throw new NoSuchElementException();
         }
 
-        Node second = first.next;
-        first.next = null;
-        first = second;
+        if (first == last){
+            first = last = null;
+        } else {
+            Node previous = getPrevious(last);
+            last = previous;
+            last.next = null;
+
+        }
+
+
+         --size;
+    }
+
+    private Node getPrevious(Node node) {
+        Node current = first;
+        while(current!=null){
+            if(current.next==node){
+                return current;
+            }
+            current = current.next;
+        }
+        return null;
+    }
+
+    public int size(){
+        return size;
     }
 
     private boolean isEmpty() {

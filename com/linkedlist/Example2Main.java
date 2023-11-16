@@ -7,9 +7,12 @@ public class Example2Main {
         list.addLast(10);
         list.addLast(20);
         list.addLast(30);
+        list.addLast(40);
         list.removeFirst();
+        list.removeLast();
         System.out.println(list.indexOf(40));
         System.out.println(list.contains(40));
+        System.out.println(list.size());
 
     }
 }
