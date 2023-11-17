@@ -13,6 +13,10 @@ public class Example2Main {
         int array[] = list.toArray();
         System.out.println(Arrays.toString(array));
 
+        list.reverse();
+        int array2[] = list.toArray();
+        System.out.println(Arrays.toString(array2));
+
         list.removeFirst();
         list.removeLast();
 
