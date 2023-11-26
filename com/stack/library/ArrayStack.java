@@ -1,16 +1,16 @@
 package com.stack.library;
 
+import java.util.NoSuchElementException;
+
 public class ArrayStack {
-    private int[] numbers;
+    private int[] numbers = new int[1];
     private int count;
 
-    public ArrayStack(int length){
-        numbers = new int[length];
-    }
+
     public void push(int element){
 
         if(numbers.length == count){
-            int[] temp = new int[count * 2];
+            int[] temp = new int[count + 1];
 
             for(int i=0;i<numbers.length;i++){
                 temp[i] = numbers[i];
@@ -21,6 +21,9 @@ public class ArrayStack {
     }
 
     public int peek(){
+        if(numbers.length==0){
+            throw new NoSuchElementException();
+        }
         return numbers[numbers.length-1];
     }
 
