@@ -1,5 +1,7 @@
 package com.stack;
 
+import com.stack.library.ExpressionBalancer;
+
 public class Example3 {
     public static void main(String[] args) {
         String str = "{[(<1+2>)]}";

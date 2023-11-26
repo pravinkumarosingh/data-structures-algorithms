@@ -1,7 +1,6 @@
 package com.stack;
 
-import java.util.Arrays;
-import java.util.Stack;
+import com.stack.library.StringReverser;
 
 public class Example2 {
     public static void main(String[] args) {

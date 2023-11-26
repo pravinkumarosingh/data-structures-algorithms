@@ -1,4 +1,4 @@
-package com.stack;
+package com.stack.library;
 
 public class ArrayStack {
     private int[] numbers;
