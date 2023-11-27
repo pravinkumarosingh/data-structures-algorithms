@@ -15,5 +15,7 @@ public class Example4 {
         arrayStack.pop();
 
         System.out.println(arrayStack.peek());
+
+        System.out.println(arrayStack.isEmpty());
     }
 }

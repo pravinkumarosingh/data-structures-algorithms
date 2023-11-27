@@ -37,4 +37,8 @@ public class ArrayStack {
         }
         numbers = temp;
     }
+
+    public boolean isEmpty(){
+        return numbers.length==0;
+    }
 }
