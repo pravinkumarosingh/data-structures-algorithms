@@ -22,12 +22,15 @@ public class ArrayStack {
 
     public int peek(){
         if(numbers.length==0){
-            throw new NoSuchElementException();
+            throw new IllegalStateException();
         }
         return numbers[numbers.length-1];
     }
 
     public void pop(){
+        if(numbers.length==0){
+            throw new IllegalStateException();
+        }
         int[] temp = new int[numbers.length-1];
         for(int i=0;i< temp.length;i++){
             temp[i] = numbers[i];
