@@ -1,9 +1,7 @@
 package com.stack.library;
 
-import java.util.NoSuchElementException;
-
 public class ArrayStack {
-    private int[] numbers = new int[1];
+    private int[] numbers = new int[0];
     private int count;
 
 
