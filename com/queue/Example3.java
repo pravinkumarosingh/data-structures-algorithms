@@ -15,7 +15,7 @@ public class Example3 {
         queue.add(40);
         queue.add(50);
         System.out.println(queue);
-        System.out.println(queueReverser.reverse(queue,3));
+        System.out.println(queueReverser.reverse(queue,0));
 
     }
 }
