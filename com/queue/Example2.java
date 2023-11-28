@@ -11,7 +11,7 @@ public class Example2 {
         queue.add(10);
         queue.add(20);
         queue.add(30);
-        System.out.println(queue.size());
+
         System.out.println(reverse(queue));
     }
 
@@ -21,13 +21,11 @@ public class Example2 {
         }
 
         Stack<Integer> stack = new Stack<>();
-        int queueSize = queue.size();
-        for(int i=0;i<queueSize;i++){
-                stack.push(queue.remove());
+        while(!queue.isEmpty()){
+            stack.push(queue.remove());
         }
 
-        int stackSize = stack.size();
-        for (int i=0;i<stackSize;i++){
+        while(!stack.isEmpty()){
             queue.add(stack.pop());
         }
 
