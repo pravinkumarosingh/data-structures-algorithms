@@ -23,6 +23,9 @@ public class ArrayQueue {
     }
 
     public boolean isEmpty(){
+        if(queue.length==0){
+            return false;
+        }
         return count == 0;
     }
 
