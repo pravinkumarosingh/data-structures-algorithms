@@ -16,5 +16,8 @@ public class Example4 {
         System.out.println(arrayQueue.isFull());
         System.out.println(arrayQueue.isEmpty());
         System.out.println(arrayQueue.peek());
+
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue.poll());
     }
 }

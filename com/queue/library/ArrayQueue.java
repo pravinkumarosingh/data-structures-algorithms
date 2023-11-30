@@ -24,8 +24,22 @@ public class ArrayQueue {
 
     }
 
+    public void dequeue(){
+        int[] temp = new int[queue.length - 1];
+
+        for (int i=1;i<queue.length - 1;i++){
+            temp[count++] = queue[i];
+        }
+
+        queue = temp;
+    }
+
     public int peek(){
         return queue[queue.length-1];
+    }
+
+    public int poll(){
+        return queue[0];
     }
 
     public boolean isEmpty(){
