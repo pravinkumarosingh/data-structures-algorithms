@@ -7,6 +7,12 @@ public class ArrayQueue {
 
     private static int count = 0;
 
+    private static int defaultCapacity = 5;
+
+    public ArrayQueue(){
+        queue = new int[defaultCapacity];
+    }
+
     public ArrayQueue(int capacity){
         queue = new int[capacity];
     }
