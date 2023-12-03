@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Example4 {
     public static void main(String[] args) {
-        ArrayQueue arrayQueue = new ArrayQueue(2);
+        ArrayQueue arrayQueue = new ArrayQueue();
 
         arrayQueue.enqueue(1);
         arrayQueue.enqueue(2);
