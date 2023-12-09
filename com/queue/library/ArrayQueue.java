@@ -52,4 +52,8 @@ public class ArrayQueue {
     public boolean isFull(){
         return count == queue.length;
     }
+
+    public int size(){
+        return count;
+    }
 }

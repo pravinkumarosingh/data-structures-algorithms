@@ -19,5 +19,7 @@ public class Example4 {
 
         arrayQueue.dequeue();
         System.out.println(arrayQueue.poll());
+
+        System.out.println(arrayQueue.size());
     }
 }
