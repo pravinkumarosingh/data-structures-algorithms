@@ -17,7 +17,7 @@ public class PriorityQueue {
 
     public void add(int element){
         if(count == queue.length)
-            throw new IllegalStateException();
+            throw new IllegalStateException("Queue is Full");
 
         int i;
         for(i=count-1;i>=0;i--){
@@ -32,7 +32,7 @@ public class PriorityQueue {
     }
 
     public int remove(){
-        if(count == 0) throw new IllegalStateException();
+        if(count == 0) throw new IllegalStateException("Queue is Empty");
 
         int[] temp = new int[queue.length - 1];
 

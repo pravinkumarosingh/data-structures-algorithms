@@ -18,6 +18,6 @@ public class Example6 {
         while (!priorityQueue.isEmpty()){
             System.out.println(priorityQueue.remove());
         }
-
+    //    System.out.println(priorityQueue.remove());
     }
 }
