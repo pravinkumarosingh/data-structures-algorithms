@@ -11,5 +11,6 @@ public class Example2 {
         String string = "A Green Apple";
         CharFinder charFinder = new CharFinder();
         System.out.println(charFinder.findFirstNonRepeatingCharacter(string));
+        System.out.println(charFinder.firstRepeatedCharacter(string));
     }
 }
