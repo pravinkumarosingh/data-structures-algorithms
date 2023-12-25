@@ -23,7 +23,6 @@ public class HashTable<Integer, String> {
             entries[index] = new LinkedList<>();
 
 
-
         LinkedList<Entry> bucket = entries[index];
         for(Entry entry:bucket){
             if(entry.key == key){
@@ -36,29 +35,30 @@ public class HashTable<Integer, String> {
     }
 
     public String get(int key){
-        int index = hash(key);
-        LinkedList<Entry> bucket = entries[index];
-        if(bucket != null){
-            for (Entry entry:bucket){
-                if(entry.key == key){
-                    return entry.value;
-                }
-            }
-        }
-        return  null;
+        Entry entry = getEntry(key);
+        return (entry == null) ? null : entry.value;
     }
 
     public void remove(int key){
-        int index = hash(key);
-        LinkedList<Entry> bucket = entries[index];
-        if(bucket == null)
+        Entry entry = getEntry(key);
+        if(entry == null)
             throw new IllegalStateException();
-        for(Entry entry:bucket){
-            if(entry.key == key)
-                bucket.remove(key);
-            return;
+        getBucket(key).remove(entry);
+    }
+
+    private LinkedList<Entry> getBucket(int key){
+        return entries[hash(key)];
+    }
+
+    private Entry getEntry(int key){
+        LinkedList<Entry> bucket = getBucket(key);
+        if(bucket != null){
+            for (Entry entry:bucket){
+                if(entry.key==key)
+                    return entry;
+            }
         }
-        throw new IllegalStateException();
+        return  null;
     }
 
     private int hash(int key) {
