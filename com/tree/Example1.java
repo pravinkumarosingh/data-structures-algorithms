@@ -11,5 +11,8 @@ public class Example1 {
         tree.insert(9);
         System.out.println("Done inserting");
         System.out.println(tree.find(4));
+        tree.traversePreOrder();
+        tree.traverseInOrder();
+        tree.traversePostOrder();
     }
 }
