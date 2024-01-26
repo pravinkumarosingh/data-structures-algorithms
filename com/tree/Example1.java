@@ -14,5 +14,6 @@ public class Example1 {
         tree.traversePreOrder();
         tree.traverseInOrder();
         tree.traversePostOrder();
+        System.out.println("Height of the tree -> " + tree.height());
     }
 }
