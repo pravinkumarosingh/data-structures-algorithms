@@ -15,5 +15,6 @@ public class Example1 {
         tree.traverseInOrder();
         tree.traversePostOrder();
         System.out.println("Height of the tree -> " + tree.height());
+        System.out.println("Minimum value in a tree -> " + tree.min());
     }
 }

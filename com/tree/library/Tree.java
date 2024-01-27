@@ -109,10 +109,29 @@ public class Tree {
             return -1;
         }
 
-        if(root.leftChild==null && root.rightChild==null){
+        if(isLeaf(root)){
             return 0;
         }
 
         return 1 + Math.max(height(root.leftChild),height(root.rightChild));
+    }
+
+    private boolean isLeaf(Node node){
+        return node.leftChild == null && node.rightChild == null;
+    }
+
+    public int min(){
+        return min(root);
+    }
+
+    private int min(Node root){
+        if(isLeaf(root)){
+            return root.value;
+        }
+
+        int left = min(root.leftChild);
+        int right = min(root.rightChild);
+
+        return Math.min(Math.min(left, right),root.value);
     }
 }
