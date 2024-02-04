@@ -1,5 +1,7 @@
 package com.tree.library;
 
+import java.util.ArrayList;
+
 public class Tree {
     private class Node{
         private int value;
@@ -174,19 +176,24 @@ public class Tree {
     }
 
 
-    public int[] nodesAtKDistance(int distance){
-        int temp[] = new int[height()];
-        int count = 0;
+    public ArrayList<Integer> nodesAtKDistance(int distance){
+        ArrayList<Integer> nodes = new ArrayList<>();
+        nodesAtKDistance(root, distance, nodes);
+        return nodes;
+    }
+
+    private void nodesAtKDistance(Node root, int distance, ArrayList<Integer> nodes){
+        if(root==null){
+            return;
+        }
+
         if(distance==0){
-            temp[0] = root.value;
-            return temp;
+            nodes.add(root.value);
+            return;
         }
-        else {
-            while(distance!=0){
-                temp = nodesAtKDistance(distance);
-                --distance;
-            }
-            return temp;
-        }
+
+        nodesAtKDistance(root.leftChild,distance - 1,nodes);
+        nodesAtKDistance(root.rightChild, distance - 1, nodes);
     }
 }
+

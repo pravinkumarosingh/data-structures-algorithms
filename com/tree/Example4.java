@@ -2,6 +2,7 @@ package com.tree;
 
 import com.tree.library.Tree;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Example4 {
@@ -12,6 +13,9 @@ public class Example4 {
         tree.insert(4);
         tree.insert(9);
 
-        System.out.println(Arrays.toString(tree.nodesAtKDistance(0)));
+       ArrayList<Integer> nodes = tree.nodesAtKDistance(1);
+       for(int node:nodes){
+           System.out.println(node);
+       }
     }
 }
