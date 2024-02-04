@@ -172,4 +172,21 @@ public class Tree {
         return isBinarySearchTree(root.leftChild, min, root.value - 1)
             && isBinarySearchTree(root.rightChild, root.value + 1, max );
     }
+
+
+    public int[] nodesAtKDistance(int distance){
+        int temp[] = new int[height()];
+        int count = 0;
+        if(distance==0){
+            temp[0] = root.value;
+            return temp;
+        }
+        else {
+            while(distance!=0){
+                temp = nodesAtKDistance(distance);
+                --distance;
+            }
+            return temp;
+        }
+    }
 }
