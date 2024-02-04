@@ -17,5 +17,7 @@ public class Example4 {
        for(int node:nodes){
            System.out.println(node);
        }
+
+       tree.levelOrderTraversal();
     }
 }

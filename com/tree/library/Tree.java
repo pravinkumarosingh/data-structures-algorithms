@@ -195,5 +195,13 @@ public class Tree {
         nodesAtKDistance(root.leftChild,distance - 1,nodes);
         nodesAtKDistance(root.rightChild, distance - 1, nodes);
     }
+
+    public void levelOrderTraversal(){
+        for(int i=0; i <= height(); i++){
+            for(Integer node : nodesAtKDistance(i)){
+                System.out.println(node);
+            }
+        }
+    }
 }
 
